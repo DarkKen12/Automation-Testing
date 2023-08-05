@@ -11,13 +11,13 @@ async function testFunc(){
     await driver.findElement(By.xpath('//div[@class="third_party_sign_in"]/a[5]/button')).click();
 
     //Logging in
-    await driver.findElement(By.id("ap_email")).sendKeys("ananddakash27@gmail.com");
-    await driver.findElement(By.id("ap_password")).sendKeys("Qwerty098",Key.RETURN);    
+    await driver.findElement(By.id("ap_email")).sendKeys("{Enter your registered email id}");
+    await driver.findElement(By.id("ap_password")).sendKeys("{Enter your password}",Key.RETURN);    
     const close_btn= await driver.findElement(By.className("modal__close"));
     await close_btn.click();
   
     //Searching for Book
-    const book_name="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones";
+    const book_name="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones";//{Example Book Name}
     await driver.findElement(By.className("searchBox__input searchBox__input--navbar")).sendKeys(book_name,Key.RETURN);
     await driver.findElement(By.linkText(book_name)).click();
     await driver.sleep(100);
